@@ -18,7 +18,7 @@ export const PlayerPut = ({ setFetchPending, selectedPlayer, setSelectedPlayer }
 
 
     const fetchData = async () => {
-        await axios.get(`http://localhost:3001/chess/${param.id}`).then(async (response) => {
+        await axios.get(`https://chess.sulla.hu/chess/${param.id}`).then(async (response) => {
             await setSelectedPlayer(response.data);
 
             setName(response.data.name);
@@ -71,7 +71,7 @@ export const PlayerPut = ({ setFetchPending, selectedPlayer, setSelectedPlayer }
                     image_url: imageURL
                 }
 
-                await axios.put(`http://localhost:3001/chess/${param.id}`, updateData).then(async () => {
+                await axios.put(`https://chess.sulla.hu/chess/${param.id}`, updateData).then(async () => {
                     await setFetchPending(true);
                     navigate('/');
                 });

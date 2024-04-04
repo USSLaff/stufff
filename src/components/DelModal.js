@@ -28,7 +28,7 @@ export const DeleteConfirmModal = ({ selectedPlayer, setFetchPending }) => {
                     <div className="modal-footer">
                         <button type="button" className="btn btn-primary" data-bs-dismiss="modal">Mégse</button>
                         <button onClick={async () => {
-                            await axios.delete(`http://localhost:3001/chess/${selectedPlayer.id}`).then(() => {
+                            await axios.delete(`https://chess.sulla.hu/chess/${selectedPlayer.id}`).then(() => {
                                 setFetchPending(true);
                                 navigate('/');
                             })

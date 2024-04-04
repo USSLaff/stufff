@@ -6,7 +6,7 @@ export const ChessPlayers = ({ chessPlayers, setChessPlayers, setSelectedPlayer,
     const navigate = useNavigate();
     const fetchPlayers = async () => {
         try {
-            const response = await fetch('http://localhost:3001/chess')
+            const response = await fetch('https://chess.sulla.hu/chess')
             const data = await response.json()
             setChessPlayers(data)
         } catch (error) {

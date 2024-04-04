@@ -18,7 +18,7 @@ export const PlayerPost = ({ setFetchPending }) => {
                     image_url: e.target.imgg.value
                 }
 
-                await axios.post('http://localhost:3001/chess/', postData).then(async () => {
+                await axios.post('https://chess.sulla.hu/chess/', postData).then(async () => {
                     await setFetchPending(true);
                     navigate('/');
                 });
